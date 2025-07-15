@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>batik AI</title>
+  <style>
+    /* ——— RESET DASAR ——— */
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    /* ——— LAYOUT UTAMA ——— */
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#f5f7fb;
+    }
+    .wrapper{
+      width:900px;                    /* ubah sesuai lebar yg diinginkan */
+      height:500px;
+      display:flex;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 15px 35px rgba(0,0,0,.12);
+      background:#fff;
+    }
+
+    /* ——— KOLOM ILUSTRASI ——— */
+    .visual{
+      flex:1 0 50%;                  /* separuh lebar */
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#fff;               /* putih */
+    }
+    .visual img{
+      max-width:85%;
+      height:auto;
+    }
+
+    /* ——— KOLOM FORM ——— */
+    .form-side{
+      flex:1 0 50%;
+      background:#535353;            /* biru sesuai contoh */
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      padding:0 60px;
+    }
+    h2{
+      letter-spacing:2px;
+      margin-bottom:40px;
+      font-size:2rem;
+    }
+    form{
+      width:100%;
+    }
+    .input-pill{
+      width:100%;
+      padding:16px 24px;
+      margin-bottom:24px;
+      border:none;
+      border-radius:50px;
+      font-size:1rem;
+      outline:none;
+    }
+    .btn-submit{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:50px;
+      background:#57d07e;            /* hijau */
+      color:#fff;
+      font-size:1rem;
+      font-weight:bold;
+      letter-spacing:2px;
+      cursor:pointer;
+      transition:opacity .25s;
+    }
+    .btn-submit:hover{opacity:.85}
+
+    /* ——— RESPONSIF MOBILE ——— */
+    @media(max-width:768px){
+      .wrapper{
+        flex-direction:column;
+        width:90%;
+        height:auto;
+      }
+      .visual, .form-side{
+        flex:1 0 auto;
+        width:100%;
+      }
+      .form-side{padding:40px 30px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <!-- SISI KIRI: ILUSTRASI -->
+    <div class="visual">
+      <!-- ganti gambar sesuai kebutuhan -->
+      <img src="/static/sufeadmin/images/batik AI.png" alt="illustration">
+    </div>
+
+    <!-- SISI KANAN: FORM -->
+    <div class="form-side">
+      <h2>WELCOME</h2>
+
+      <form method="POST" action="/">
+         <input type="text" name="email" placeholder="Email"  class="input-pill" required>
+  <input type="password" name="password" placeholder="Password"  class="input-pill" required>
+
+  <button type="submit" class="btn-submit">SUBMIT</button>
+
+  <!-- tombol ke /register -->
+  <button type="button" class="btn-register"
+          style="width:100%;padding:16px;border:none;border-radius:50px;
+                 background:#ffa726;color:#fff;font-size:1rem;font-weight:bold;
+                 letter-spacing:2px;cursor:pointer;transition:opacity .25s;
+                 margin-top:12px;"
+          onclick="location.href='/register'">
+      REGISTER
+  </button>
+      </form>
+    </div>
+
+  </div><!-- /.wrapper -->
+
+</body>
+</html>

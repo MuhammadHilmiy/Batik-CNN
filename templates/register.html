@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | Batik AI</title>
+  <style>
+    /* —— RESET —— */*{box-sizing:border-box;margin:0;padding:0}
+
+    /* —— LAYOUT HALAMAN —— */
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#f5f7fb;
+    }
+
+    /* —— BOX REGISTRASI —— */
+    .reg-card{
+      width:340px;
+      background:#535353;           /* sama abu‑gelap panel login */
+      border-radius:14px;
+      padding:40px 32px 48px;
+      box-shadow:0 15px 35px rgba(0,0,0,.12);
+      text-align:center;
+      color:#fff;
+    }
+
+    /* ikon bulat di atas */
+    .reg-card .avatar{
+      width:70px;
+      height:70px;
+      border-radius:50%;
+      background:#57d07e;           /* hijau senada tombol submit */
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin:-70px auto 24px;       /* naik ke luar kartu */
+      box-shadow:0 4px 10px rgba(0,0,0,.15);
+    }
+    .avatar i{font-size:34px;color:#fff;}
+
+    h3{margin-bottom:32px;letter-spacing:1px;font-weight:600;}
+
+    /* input pill */
+    .input-pill{
+      width:100%;
+      padding:14px 22px;
+      margin-bottom:18px;
+      border:none;
+      border-radius:50px;
+      font-size:0.95rem;
+      outline:none;
+    }
+
+    /* tombol Register */
+    .btn-register{
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:50px;
+      background:#57d07e;           /* hijau seperti tombol submit login */
+      color:#fff;
+      font-size:1rem;
+      font-weight:bold;
+      letter-spacing:2px;
+      cursor:pointer;
+      transition:opacity .25s;
+      margin-top:6px;
+    }
+    .btn-register:hover{opacity:.85}
+
+    /* link back to login */
+    .back-link{
+      display:inline-block;
+      margin-top:20px;
+      color:#ddd;
+      font-size:0.9rem;
+      text-decoration:none;
+      transition:color .2s;
+    }
+    .back-link:hover{color:#fff}
+
+  </style>
+</head>
+<body>
+
+  <!-- —— KARTU REGISTRASI —— -->
+  <div class="reg-card">
+
+      <!-- avatar icon -->
+      <div class="avatar">
+        <!-- gunakan FontAwesome / icon bebas; di sini unicode user -->
+        <i class="fa fa-user"></i>
+      </div>
+
+      <h3>Registrasi</h3>
+
+      <form method="POST" action="/register">
+  <input type="text"  name="name"  placeholder="Name"  class="input-pill" required>
+  <input type="email" name="email" placeholder="Email" class="input-pill" required> <!-- diubah -->
+  <input type="password" name="password"   placeholder="Password"    class="input-pill" required>
+  <input type="password" name="repassword" placeholder="Re‑Password" class="input-pill" required>
+
+  <button type="submit" class="btn-register">REGISTER</button>
+</form>
+<a href="/" class="back-link">Back to Login</a>
+
+  </div>
+
+  <!-- CDN FontAwesome (hanya agar ikon user muncul) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
